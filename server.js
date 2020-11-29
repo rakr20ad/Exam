@@ -1,9 +1,12 @@
-const express = require('express'); 
+const express = require ('express');
+
+//var cors = require('cors')
 
 const app = express(); 
 
-const port = 1000; 
+const port = 2000; 
 
+//app.use(cors())
 
 app.get('/', (req, res) =>{
     res.send('Hello Rasmus, u beautiful piece of shit')
@@ -12,4 +15,3 @@ app.get('/', (req, res) =>{
 app.listen(port, () => {
     console.log(`Example app listen at http://localhost:${port}`)
 })
-

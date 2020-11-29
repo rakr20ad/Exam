@@ -3,38 +3,48 @@
 <head>
 <meta charset = "UTF-8">
 <!--Linker til min CSS fil her-->
-<link rel="stylesheet" href="style.css">
-<script src="server.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css">
+<!--DU SKAL IKKE LINKE TIL DIN STORAGE!!-->
+<!--<script src="Storage/storage.js"></script>-->
 </head>
 
     <body>
+        
+
         <h1>The new Tinder!</h1>
         <h2>The new groundbreaking algorithm that mactches you with YOUR soulmate</h2>
-        
-        <form method = post>
 
-        <!--Laver vores bar øverst, oversigten-->
+        <!--Laver vores bar øverst, oversigten
         <header class="header2" id="header2">            
             <div class="topnav">
                 <a href="index.html">Home</a>
-                <a href="Pages/swipe.html">Swipe</a>
-                <a href="Pages/match.html">Matches</a>
-                <a href="Pages/Profile.html">Profile</a>
+                <a href="swipe.html">Swipe</a>
+                <a href="match.html">Matches</a>
+                <a href="Profile.html">Profile</a>
             </div>
+        -->     
 <br>
-            <div class="leftDiv">
-            <div>
+<form>
+
+         <!--Her laves sign up delen-->
+            <div id="Husk" class="Husk">
+             <div>
                 <h3>Sign up now!</h3>
-                <select name="gender">
+                <select name="gender" id="urGender">
                     <option value ="select">Select your gender</option>
                     <option value="option 1">Male</option>
                     <option value="option 2">Female</option>
+                    <option value="option 3">Trans</option>
                     <option value="option 4">Other</option>
                 </select>
             </div>
+
+
 <br>
+
+            
             <div>
-                <select name="Who are you looking for?">
+                <select name="Who are you looking for?" id="prefGender"> 
                     <option value="select">Select wished gender</option>
                     <option value="option 1">Male</option>
                     <option value="option 2">Female</option>
@@ -42,7 +52,11 @@
                     <option value="option 4">All of the above</option>
                 </select>
             </div>
+
+
 <br>        
+
+
             <div>
                 <label>Write your e-mail here</label>
 
@@ -52,18 +66,26 @@
 
             <p id="@"></p>
 
+
+
             <div>
                  <label>Write your firstname here</label>
 <br>               
-                <input type="text" name="Firstname" placeholder="Firstname...">
+                <input id="firstname" type="text" name="firstname" placeholder="Firstname...">
             </div>
 
+
+
 <br>            
+
+
             <div>
                 <label>Write your lastname here</label>
 <br>               
-                <input type="text" name="Lastname" placeholder="Lastname...">
-            </div>        
+                <input id="lastname" type="text" name="lastname" placeholder="Lastname...">
+            </div>     
+            
+            
 
 <!--Bruger post method i form, da der er et password med-->
 <br>           
@@ -78,19 +100,28 @@
             <p id="number"></p>
             <p id="sl"></p>
             </div>
+
+
 <br> 
+
+
 
             <label>Select your birth date</label>
 <br>
             <div>
-                <input type="date" date="birthday" name="birthday date">
+                <input id="birthday" type="date" date="birthday" name="birthday date">
 
             </div>
 
+
 <br>
-            <button type="submit" type = "submit">Sign up!</button>
-<br>
+
+            <div>
+            <button id="submit" type="submit" name="submit">Sign up!</button>
+            </div>
         </div>
+
+        
 
 
             <div class = 'rightDiv'>
@@ -98,24 +129,32 @@
                 <h4>Log in, BOI!</h4>
                 <label>Write your username here pls</label>
 <br>
-                <input type="Username" id="Username" placeholder="Username"
+                <input id="Username" type="Username" id="Username" placeholder="Username"
             </div>
 
+
 <br>
-<br>
+
+
             <div>
                 <label>Write your password here, boi</label>
 <br>
                 <input id="password2" type="password2" placeholder="Password"
             </div>
+
+
 <br>
 <br>
-            <button type="submit" name ="submit">Log in!</button>
+
+
+            <button id="login" type="submit" name ="submit">Log in!</button>
 
             </div>
             </form>
         </header>
 <script src="Forside.js"></script>
+<script src="storage.js"></script>
+
     </body>
 
 </html>

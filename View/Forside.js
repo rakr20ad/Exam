@@ -1,3 +1,4 @@
+//Hukket fra assignment 4. 
 document.getElementById("password").addEventListener("keyup", function(){
     console.log(password.value);
     if (password.value.length <= 8){

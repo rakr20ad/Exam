@@ -1,4 +1,4 @@
-.topnav {
+.topnav, #topnav{
     background-color: #ff2252;
     overflow: hidden;
     margin-bottom: 100px;
@@ -10,7 +10,7 @@
     
   }
 
-.topnav a {
+.topnav a, #topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -24,7 +24,7 @@
     box-sizing: border-box;
   }
   
-.topnav a:hover {
+.topnav a:hover, #topnav a:hover {
   background-color: #9d1532;
   color: white;
 }
@@ -33,18 +33,21 @@
   width: 50%; 
   float: right; 
   box-sizing: border-box;
-  text-align: center; 
-  border-bottom: solid; 
+  /*text-align: center;*/ 
+  /*border-bottom: solid;*/ 
   height: 458px;
+  padding: 5px;
 }
 
-.leftDiv {
+.Husk {
   width: 50%;
   float: left; 
   box-sizing: border-box; 
   border-right: solid;
-  border-bottom: solid;
+  /*border-bottom: solid;*/
   height: relative;
+  padding: 5px;
+  /*text-align: center;*/
   /* kan evt add text align center her også*/
 }
 
