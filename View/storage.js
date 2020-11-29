@@ -1,6 +1,6 @@
 //Husk nu at lave en slet funktion
 //Kilde Nicolais video om local storage
-/*cconst rememberDiv = document.querySelector('.Husk');*/
+// "const rememberDiv = document.querySelector('.Husk');" Dette viste Nicolai i "local storage" videoen, men denne løsning har fungeret for mig
 const form = document.querySelector('form');
 const urGenderInput = document.querySelector('#urGender');
 const prefGenderInput = document.querySelector('#prefGender');
@@ -9,7 +9,7 @@ const firstNameInput = document.querySelector('#firstname');
 const lastNameInput = document.querySelector('#lastname');
 const passwordInput = document.querySelector('#password');
 const birthdayInput = document.querySelector('#birthday');
-//
+// Ikke præcist som vist i Nicolais video, men denne ændring fik det til at fungere + at localstorage.setItem til én funktion
 const submitBtn = document.querySelector('#submit').addEventListener("click", saveStorage)
 
 
