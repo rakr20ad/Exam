@@ -1,5 +1,21 @@
+/* BRUG DETTE TIL LOG IN KNAPPEN!
+const { get } = require("http");
+
+//This line in the example above creates an XMLHttpRequest object
+var xhttp = new XMLHttpRequest (); 
+
+//The onreadystatechange property specifies a function to be executed every time the status of the XMLHttpRequest object changes
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        //typical action to be peformed when the document is ready
+        document.getElementById("submit").innerHTML = xhttp.responseText;
+    }
+    };
+xhttp.open("GET", "filename", true);
+xhttp.send();*/
+
 // Kilde: står inde under server.js
-const userRoutes = (app, fs) => {
+/*const userRoutes = (app, fs) => {
     // variables 
     const dataPath = './Data/users.json';
 
@@ -12,9 +28,9 @@ const userRoutes = (app, fs) => {
 
             res.send(JSON.parse(data));
         })
-    })*/
+    })
 
-  // refactored helper methods
+  // refactored helper methods. Dette er omskrevet af koden ovenover. Gør det lettere
   const readFile = (
     callback,
     returnJson = false,
@@ -65,6 +81,31 @@ app.post('/users', (req, res) => {
       });
     }, true);
   });
+  // UPDATE
+app.put('/users/:id', (req, res) => {
+  readFile(data => {
+    // add the new user
+    const userId = req.params['id'];
+    data[userId] = req.body;
+
+    writeFile(JSON.stringify(data, null, 2), () => {
+      res.status(200).send(`users id:${userId} updated`);
+    });
+  }, true);
+});
+  // DELETE
+app.delete('/users/:id', (req, res) => {
+  readFile(data => {
+    // add the new user
+    const userId = req.params['id'];
+    delete data[userId];
+
+    writeFile(JSON.stringify(data, null, 2), () => {
+      res.status(200).send(`users id:${userId} removed`);
+    });
+  }, true);
+});
 };
 
 module.exports = userRoutes; 
+*/

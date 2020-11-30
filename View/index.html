@@ -3,7 +3,8 @@
 <head>
 <meta charset = "UTF-8">
 <!--Linker til min CSS fil her-->
-<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="style.css">
+<script src="/Model/User.js"></script>
 <!--DU SKAL IKKE LINKE TIL DIN STORAGE!!-->
 <!--<script src="Storage/storage.js"></script>-->
 </head>
@@ -32,10 +33,10 @@
                 <h3>Sign up now!</h3>
                 <select name="gender" id="urGender">
                     <option value ="select">Select your gender</option>
-                    <option value="option 1">Male</option>
-                    <option value="option 2">Female</option>
-                    <option value="option 3">Trans</option>
-                    <option value="option 4">Other</option>
+                    <option value="Male">Male</option>
+                    <option value="Female 2">Female</option>
+                    <option value="Trans">Trans</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
@@ -46,10 +47,10 @@
             <div>
                 <select name="Who are you looking for?" id="prefGender"> 
                     <option value="select">Select wished gender</option>
-                    <option value="option 1">Male</option>
-                    <option value="option 2">Female</option>
-                    <option value="option 3">Trans</option>
-                    <option value="option 4">All of the above</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Trans">Trans</option>
+                    <option value="All of the above">All of the above</option>
                 </select>
             </div>
 
@@ -61,7 +62,7 @@
                 <label>Write your e-mail here</label>
 
 <br>             <!--Husk at lave en paragraf, hvis man skal lave betingelser-->   
-            <input id="email" type="text" name="E-mail" placeholder="Write your e-mail here...">
+            <input id="email" type="email" name="E-mail" placeholder="Write your e-mail here...">
             </div>
 
             <p id="@"></p>
@@ -154,7 +155,6 @@
         </header>
 <script src="Forside.js"></script>
 <script src="storage.js"></script>
-
     </body>
 
 </html>
