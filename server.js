@@ -3,8 +3,10 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
-//var cors = require('cors')
-//app.use(cors())
+
+//ved ikke helt, hvad dette skulle bruges til
+/*var cors = require('cors')
+app.use(cors())*/
 
 const app = express(); 
 
@@ -35,10 +37,11 @@ app.get("/", function(req, res){
 
 //Kilde: https://stackoverflow.com/questions/43800588/why-need-use-express-static
 app.use(express.static("View"));
+//app.use(express.static("Model"))
 
 
 
-//res.sendFile(path.join(__dirname + "./"));
+
 
 
 
