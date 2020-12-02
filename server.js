@@ -12,7 +12,7 @@ const app = express();
 
 // we'll load up node's built in file system helper library here
 // (we'll be using this later to serve our JSON files
-//const fs = require('fs');
+const fs = require('fs');
 
 //const port = 2000; 
 
@@ -33,7 +33,11 @@ const server = app.listen(8080, () => {
 app.get("/", function(req, res){
   res.sendFile(path.join(__dirname + "/View/index.html"));
 })
-
+/*
+const hej = require("./View/storage.js")
+app.post("/add", (req, res)=>{
+  res.send(newUser)
+})*/
 
 //Kilde: https://stackoverflow.com/questions/43800588/why-need-use-express-static
 app.use(express.static("View"));

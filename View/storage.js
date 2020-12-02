@@ -2,7 +2,10 @@
 //Kilde Nicolais video om local storage
 // "const rememberDiv = document.querySelector('.Husk');" Dette viste Nicolai i "local storage" videoen, men denne løsning har fungeret for mig
 //const User = require("../Model/User");
-const submitBtn = document.querySelector('#submit').addEventListener("click", virkNuMand)
+
+//const fs = require('fs')
+
+const submitBtn = document.getElementById('submit').addEventListener("click", virkNuMand)
 form.addEventListener('submit', function(e){
     e.preventDefault();
 })
@@ -16,6 +19,7 @@ function virkNuMand(){
     let urGender = document.getElementById("urGender").value; 
     let prefGender = document.getElementById("prefGender").value; 
 
+    //Laver newUser som et objekt til hvordan jeg gerne vil have det opstillet i localstorage
     let newUser = {
         firstname : firstName,
         lastName : lastName,
@@ -29,12 +33,16 @@ function virkNuMand(){
     
 var value = JSON.stringify([newUser.firstName, newUser.lastName, newUser.dateOfBirth, newUser.email, newUser.password, newUser.urGender, newUser.prefGender]);
 localStorage.setItem("newUser", value); 
-var createdUser = JSON.parse(localStorage.getItem('"newUser"')); 
+var createdUser = JSON.parse(localStorage.getItem("newUser")); 
 var addUser = JSON.stringify(createdUser); 
-localStorage.setItem("newUser_"+firstName, JSON.stringify("newUser"))
+//fs.writeFileSync('../Data/users.json', addUser)
+//var count = getCount(); Metode vi fandt på nettet
+localStorage.setItem("newUser_"+ firstName, JSON.stringify(newUser))
 }
 
+//module.exports = virkNuMand; 
 
+//fs.writeFileSync('../Model/users.json', JSON.stringify(newUser))
 /*
 // kan sgu ikke finde ud af at rykke mappen med succes, så storage er sgu bare her ah. 
 const form = document.querySelector('form');
